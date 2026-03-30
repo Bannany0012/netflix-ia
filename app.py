@@ -8,7 +8,7 @@ from sklearn.preprocessing import LabelEncoder
 # 1. Loading & Cleaning
 @st.cache_data # باش ما يبقاش يعاود التحميل كل مرة
 def load_data():
-    df = pd.read_csv('netflix.csv')
+    df = pd.read_csv('devcontainer/netflix.csv')
     df['country'] = df['country'].fillna('United States')
     df['rating'] = df['rating'].fillna('TV-MA')
     df['date_added'] = pd.to_datetime(df['date_added'].str.strip())
